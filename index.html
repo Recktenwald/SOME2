@@ -51,21 +51,22 @@
         <div class="slides">
             <section >
 <h3>Introduction</h3>
-<p class="fragment">Let's say we start with two points, a ruler, and a compass. I.e. we can draw lines between any two points, and we can draw a circle around a point through a point.</p>
-<p class="fragment">What shapes can we make? </p>
+<p>Let's say we start with two points, a ruler, and a compass. I.e. we can draw lines between any two points, and we can draw a circle around a point through a point.
+What shapes can we make?</p>
+<img src="images/onlytwopoints.png" width="43%">
 </section>
 <section >
 <h3>Introduction</h3>
 <p>Let's say we are given the two red points.
 Just by playing around it is fairly easy to make a triangle.</p>
 <img src="images/ConstructingTriangle.png" width="43%">
-<!-- ![Triangle](images/ConstructingTriangle.png) -->
 </section>
 <section >
 <h3>Introduction</h3>
 <p>It is also not too hard to construct a square. Let's say we are given <span class="math">\(P_0\)</span> and <span class="math">\(P_1\)</span>. <br>
-We first construct the point <span class="math">\(P_2\)</span> with the green circle. <br>
-Then we draw the two blue circles, and the line between their intersections (<span class="math">\(Q_1\)</span> and <span class="math">\(Q_2\)</span>) is the <span class="math">\(y\)</span>-axis.
+We construct the point <span class="math">\(P_2\)</span> with the green circle intersecting line through <span class="math">\(P_0\)</span> and <span class="math">\(P_1\)</span>. <br>
+Then we draw the two blue circles (with radius <span class="math">\(\overline{P_1P_2}\)</span> and midpoints <span class="math">\(P_1\)</span> and <span class="math">\(P_2\)</span>, resp.).</p>
+<p>The line between their intersections is the <span class="math">\(y\)</span>-axis.
 <p class="fragment">In particular this can be used to construct the perpendicular bisector.</p></p>
 <img src="images/ConstructingSquare.png" width="43%">
 </section>
@@ -78,16 +79,19 @@ By keeping going like this we will eventually get all 6 corners.</p>
 <img src="images/ConstructingHexagon.png" width="43%">
 </section>
 <section >
-<section >
 <h3>Introduction</h3>
 <p>The pentagon is the first harder shape to find. <br>
 And if you find it through playing around, can you be <em>sure</em> that it is actually a pentagon? <br>
-How would you even proof that?
-<p class="fragment">By the end of this, I hope to show you how thinking algebraically about a geometric problem can help answer questions like this. <br>
-I will assume that you have a very basic familiarity with complex numbers, but nothing more. <br>
-This presentation is 2-dimensional. If a slide contains harder material I tried to make it more clear on the slides underneath it. <br>
-You can press down with the arrow keys or on the arrows on the bottom right corner. <br>
-Please try it out :)</p></p>
+How would you even prove that?</p>
+<img src="images/RawPentagon_0.png" width="43%">
+</section>
+<section >
+<section >
+<h3>Introduction</h3>
+<p>By the end of this, I hope to show you how thinking algebraically about a geometric problem can help answer questions like this.</p>
+<p>I will assume that you have a very basic familiarity with complex numbers, but nothing more.</p>
+<p>This presentation is 2-dimensional. If a slide contains harder material I tried to make it more clear on the slides underneath it. You can press down with the arrow keys or on the arrows on the bottom right corner.</p>
+<p>Please try it out :)</p>
 </section>
 <section >
 <h3>Helper slide</h3>
@@ -108,21 +112,27 @@ Please try it out :)</p></p>
 <p>First of all we need to understand that the set of points we can construct form an algebraic structure. <br>
 We think of the plane as the complex numbers and I claim that if we have constructed any two points, then we can add and multiply them as complex numbers. (To be more precise it is a <em>subfield</em>)<br>
 To show this, it is enough to prove it for real numbers, i.e. points on the <span class="math">\(x\)</span>-axis. This will make the pictures with the constructions less 'crowded' with shapes. (For more details on why this works click down.)</p>
-<p class="fragment">For arithmetic to even make sense we need to fix a frame of reference. We have seen from the construction of the square that we can draw a the coordinate axis. See the second helper slide for a more details.</p>
+<p class="fragment">For arithmetic to even make sense we need to fix a frame of reference. We have seen from the construction of the square that we can draw the coordinate axis. See the second helper slide for a more details.</p>
 </section>
 <section >
-<h3>Some Quick Notes on Complex Numbers</h3>
+<h3>Some Quick Notes on Complex Numbers I</h3>
 <p>Real numbers (denoted <span class="math">\(\mathbb{R}\)</span>) are numbers as most people would understand them in everyday life. They can be positive or negative, whole numbers like <span class="math">\(1,2,-7\)</span>, fractions like <span class="math">\(\frac{1}{2}\)</span> or more complicated things like <span class="math">\(\sqrt{2}\)</span> or <span class="math">\(\pi\)</span>.</p>
 <p>A complex number <span class="math">\(z\)</span> consists of two parts, a real and imaginary part. You can think of the real part as the <span class="math">\(x\)</span>-direction and of the imaginary part as the <span class="math">\(y\)</span>-direction. That is why we can identify points on a plane with complex numbers.</p>
-<p>Because we can easily 'rotate' every number by 90° (see for example how we constructed <span class="math">\(Q_1\)</span> and <span class="math">\(Q_2\)</span> for the square), we can construct the complex number <span class="math">\(a + bi\)</span> from the two real numbers <span class="math">\(a\)</span> and <span class="math">\(b\)</span> with ruler and compass. And therefore it is enough to only consider basic arithmetic on the real number line.</p>
+<img src="images/ComplexNumbersI.png" width="43%">
+</section>
+<section >
+<h3>Some Quick Notes on Complex Numbers II</h3>
+<p>Because we can easily 'rotate' every number by 90°, we can construct the complex number <span class="math">\(a + bi\)</span> from the two real numbers <span class="math">\(a\)</span> and <span class="math">\(b\)</span> with ruler and compass. And therefore it is enough to only consider basic arithmetic on the real number line.</p>
+<p>On the picture below we see how we can transform <span class="math">\(a\)</span> to <span class="math">\(a\cdot i\)</span> or vice versa.</p>
 <p>This construction can also be seen on the next slide.</p>
+<img src="images/ComplexNumbersIII.png" width="43%">
 </section>
 <section >
 <h3>Fixing a Frame of Reference</h3>
 <p>Remember: We always start with two points. We can just declare one of them to be <em>defined</em> as the origin, i.e. <span class="math">\((0,0)\)</span> and the other one as <span class="math">\((0,1)\)</span>, and implicit in this is
 <em> the definition of the <span class="math">\(x\)</span>-axis.
 </em> the definition of <span class="math">\(1\)</span>.
-In the picture above this is indicated by the black lines.</p>
+In the pictures before this is indicated by the black lines.</p>
 </section>
 </section>
 <section >
@@ -213,7 +223,7 @@ The first line satisfies <span class="math">\(y=-\frac{1}{a}x + 1\)</span>. The 
 <h3>Square Root</h3>
 <p>We take the square root of some positive number <span class="math">\(a\)</span>. We first draw a circle through the midpoint between <span class="math">\(0\)</span> and <span class="math">\(1+a\)</span> through the origin and <span class="math">\(1+a\)</span>. With this circle</p>
 <ul>
-<li>We first draw the perpendicular line in <span class="math">\(a\)</span> on the <span class="math">\(x\)</span>-axis. This line intersect the circle.</li>
+<li>We first draw the perpendicular line in <span class="math">\(1\)</span> on the <span class="math">\(x\)</span>-axis. This line intersect the circle.</li>
 <li>We draw the triangle with this new point on the circle, the origin, and <span class="math">\(1+a\)</span>.</li>
 <li>By <a href="https://en.wikipedia.org/wiki/Thales%27s_theorem">Thale's Theorem</a> this is a right triangle, so the following equations all hold</li>
 </ul>
@@ -343,12 +353,12 @@ x_0^2 + y_0^2 -r^2 &amp;= -1 \left(\Rightarrow y_0^2 - r^2 = -\frac54 \right)
 <p>Next we need <span class="math">\(r&gt;0\)</span> since otherwise it wouldn't be a geometric circle.</p>
 <p>As far as actual algebra goes, I would just suggest multiplying with <span class="math">\(4\)</span>, noticing that <span class="math">\(4=2^2\)</span> and then get
 <span class="math">\[(2y_0)^2 - (2r)^2 = -5\]</span>
-So wee need two square numbers that differ by <span class="math">\(5\)</span>, and <span class="math">\((4,9)\)</span> can be easily found by hand, and then transformed to the solution on the slide above.</p>
+So we need two square numbers that differ by <span class="math">\(5\)</span>, and <span class="math">\((4,9)\)</span> can be easily found by hand, and then transformed to the solution on the slide above.</p>
 </section>
 </section>
 <section >
 <h3>Putting it back into Geometry</h3>
-<p>What we have shown, in essance, is that the intersection of the circle
+<p>What we have shown, in essence, is that the intersection of the circle
 <span class="math">\[\left(X+\frac12\right)^2 + \left(Y-1\right)^2 = \left(\frac32\right)^2 \text{ and the line } Y=0\]</span>
 is given by <span class="math">\(X^2+X-1=0\)</span>. <em>So this is a geometric construction of <span class="math">\(\zeta + \zeta^4\)</span></em>.</p>
 <p>And we know from the arithmetic part above how to get the midpoint <span class="math">\((-1/2, 1)\)</span> and the radius <span class="math">\(3/2\)</span> of the circle, from two given points.</p>
@@ -366,6 +376,15 @@ is given by <span class="math">\(X^2+X-1=0\)</span>. <em>So this is a geometric 
 <li>Compute the powers of <span class="math">\(\zeta\)</span>.</li>
 </ul>
 <img src="images/Pentagon_Final.png" width="43%" >
+</section>
+<section >
+<h3>Putting it all together</h3>
+<p>Technically we have only constructed <span class="math">\(\zeta\)</span> and <span class="math">\(\zeta^4\)</span>. There are multiple ways to get <span class="math">\(\zeta^2\)</span> and <span class="math">\(\zeta^3\)</span>.</p>
+<ul>
+<li>Repeat the same process to construct <span class="math">\(\zeta^2\)</span> in the same way we did for <span class="math">\(\zeta\)</span>. This is tedious, but requires no new insights.</li>
+<li>Go back to the basic arithmetic section and just do the multiplication of <span class="math">\(\zeta\)</span> with itself to get <span class="math">\(\zeta^2\)</span>.</li>
+<li>Draw the circle around <span class="math">\(\zeta\)</span> through <span class="math">\(1\)</span> ;)</li>
+</ul>
 </section>
 
 
